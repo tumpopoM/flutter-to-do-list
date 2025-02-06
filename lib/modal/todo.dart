@@ -30,21 +30,4 @@ class ToDo {
       ),
     ];
   }
-
-  // static void addTodo (String todoText){
-  //   todoList.add(ToDo(
-  //     id: DateTime.now().toString(),
-  //     todoText: todoText,
-  //     isDone: false
-  //   ));
-  // }
-
-  // static void deleteTodo (String id){
-  //   todoList.removeWhere((element) => element.id == id);
-  // }
-
-  // static void toggleDone (String id){
-  //   final todo = todoList.firstWhere((element) => element.id == id);
-  //   todo.isDone = !todo.isDone;
-  // }
 }

@@ -23,7 +23,6 @@ class _HomeState extends State<Home> {
   }
 
   void searchTodoList(String searchKey) {
-    print('Search Key ::::: ${searchKey}');
     if (searchKey.isEmpty) {
       setState(() {
         _foundTodoList = todoList;
@@ -40,7 +39,6 @@ class _HomeState extends State<Home> {
   }
 
   void addTodo(String todoText) {
-    print('Add Todo ::::: ${todoText}');
     setState(() {
       todoList.add(ToDo(
         id: DateTime.now().microsecondsSinceEpoch.toString(),
@@ -120,7 +118,6 @@ class _HomeState extends State<Home> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    print('Add Todo !!!! ${_todoController.text}');
                     addTodo(_todoController.text);
                   },
                   child: Container(
@@ -162,8 +159,8 @@ class _HomeState extends State<Home> {
             child: const ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(100)),
               child: Align(
-                alignment: Alignment.topCenter, // กำหนดให้ภาพอยู่ด้านบน
-                heightFactor: 0.1, //
+                alignment: Alignment.topCenter,
+                heightFactor: 0.1,
                 child: Image(
                   image: AssetImage('lib/assets/images/FnJ-EWDXkAIOBJE.jpeg'),
                   width: 40,
@@ -200,7 +197,6 @@ class SearchBoxState extends State<SearchBox> {
           color: bgWhiteColor, borderRadius: BorderRadius.circular(20)),
       child: TextField(
         onChanged: (value) {
-          print('Search Value ::::: ${value}');
           widget.searchTodoList(value);
         },
         decoration: InputDecoration(
